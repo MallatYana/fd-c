@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import './assets/variables';
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.no-decorations-text {
+  color: inherit;
+  text-decoration: none;
+  cursor: inherit;
+}
+
+.no-decorations-btn {
+  background: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.description-text {
+  font-size: small;
+  text-align: justify;
+  color: var(--fdc-description-color);
+}
+
+.nav-arrow-left {
+  top: 40px;
+  left: 20px;
+
+  @media (max-width: 799px) {
+    left: 15px;
+  }
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
+
+.author-link-hover {
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: var(--fdc-link-color);
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
