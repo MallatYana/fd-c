@@ -1,0 +1,31 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <div>
+      <span class="mr-1">{{madeBy}}</span>
+      <a class="modal-title no-decorations-text author-link-hover bold" id="modal-basic-title" href="{{item.authorLink}}">
+        {{item.author}}
+      </a>
+    </div>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body p-0">
+    <img src="{{item.url}}"
+         class="card-img-top">
+  </div>
+  <div class="modal-footer">
+    <p class="description-text">{{item.description}}</p>
+    <div *ngIf="!isArt">
+      <p class="description-text bold">Full link: <span>{{writerFullLink}}</span></p>
+    </div>
+  </div>
+</ng-template>
+
+<button class="no-decorations-btn"
+        (click)="open(content)">
+  <img src="{{item.url}}"
+       class="card-img-top"
+       ngbTooltip="{{item.tooltip}}"
+       placement="right"
+       alt="{{item.description}}"
+       style="object-fit: cover; height: {{previewSize.height}}px; width: {{previewSize.width}}rem">
+</button>
