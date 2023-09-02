@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GalleryCardComponent } from './gallery-card/gallery-card.component';
 import { RouterModule } from '@angular/router';
+import { ArtistsListCardComponent } from './artists-list-card/artists-list-card.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [GalleryCardComponent],
-  exports: [GalleryCardComponent],
+  declarations: [ArtistsListCardComponent],
+  exports: [ArtistsListCardComponent],
   imports: [CommonModule, RouterModule, NgbTooltipModule],
 })
-export class GalleryCardModule {}
+export class ArtistsListCardModule {}

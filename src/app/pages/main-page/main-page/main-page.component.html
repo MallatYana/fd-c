@@ -1,7 +1,28 @@
-<div style="margin-top: 220px; margin-left: 120px">
+<div style="margin-top: 120px; margin-left: 120px; margin-right: 120px">
+
+  <h1 class="calligraffiti text-center mb-5">Commissions</h1>
+
   <app-small-search-field></app-small-search-field>
 
-  <div class="d-flex">
-   <app-gallery-card></app-gallery-card>
+  <div class="pt-5">
+    <app-gallery-card></app-gallery-card>
+  </div>
+
+  <div class="d-flex justify-content-between gap-3 pt-3">
+   <app-artists-list-card
+     [isArter]="true"
+   ></app-artists-list-card>
+    <app-artists-list-card
+      [isArter]="false"
+    ></app-artists-list-card>
+  </div>
+
+  <div class="mt-5 d-flex justify-content-center align-content-center main-font">
+    <div class="mx-2 pointer">
+      <about-us-modal></about-us-modal>
+    </div>
+    <div class="mx-2 pointer">
+      <rules-modal></rules-modal>
+    </div>
   </div>
 </div>

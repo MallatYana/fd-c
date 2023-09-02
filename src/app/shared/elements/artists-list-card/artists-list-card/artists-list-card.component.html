@@ -1,0 +1,17 @@
+<div class="artists-list-container">
+  <h4 class="main-font">{{title}}</h4>
+
+  <div class="card pointer"
+      [routerLink]="['/creators']">
+    <div class="card-body d-flex justify-content-around align-items-center">
+      <div *ngFor="let artist of artists"
+        class="image-container mx-1 d-flex justify-content-around align-items-center"
+        title="image"
+        ngbTooltip="{{artist.nickName}}"
+      >
+        <img src="{{artist.avatar}}"
+             class="rounded d-block">
+      </div>
+    </div>
+  </div>
+</div>

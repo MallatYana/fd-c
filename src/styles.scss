@@ -1,10 +1,31 @@
 @import 'bootstrap/scss/bootstrap';
 @import './assets/variables';
 
+@font-face {
+  font-family: "CalligraffittiRegular";
+  src: url("./assets/fonts/CalligraffittiRegular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
 .pointer {
   cursor: pointer !important;
 }
 
+.calligraffiti {
+  font-family: CalligraffittiRegular !important;
+}
+
+.main-font {
+  font-family: Avenir;
+  font-weight: lighter;
+}
+
+.main-hover {
+  &:hover {
+    color: var(--fdc-main-hover-color);
+  }
+}
 .no-decorations-text {
   color: inherit;
   text-decoration: none;

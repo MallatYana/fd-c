@@ -8,18 +8,10 @@ import { MainPageModule } from './pages/main-page/main-page.module';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgbModule,
-        MainPageModule,
-        NgbTooltipModule
-    ],
-    providers: [],
-    exports: [],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, MainPageModule, NgbTooltipModule],
+  providers: [],
+  exports: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

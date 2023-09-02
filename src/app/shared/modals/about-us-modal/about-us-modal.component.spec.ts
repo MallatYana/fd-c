@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WriterPageComponent } from './writer-page.component';
+import { AboutUsModalComponent } from './about-us-modal.component';
 
-describe('WriterPageComponent', () => {
-  let component: WriterPageComponent;
-  let fixture: ComponentFixture<WriterPageComponent>;
+describe('AboutUsModalComponent', () => {
+  let component: AboutUsModalComponent;
+  let fixture: ComponentFixture<AboutUsModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WriterPageComponent ]
+      declarations: [ AboutUsModalComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WriterPageComponent);
+    fixture = TestBed.createComponent(AboutUsModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
