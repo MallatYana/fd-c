@@ -1,0 +1,20 @@
+<ng-template #aboutUs let-c="close" let-d="dismiss">
+  <div class="modal-header main-font bold">
+    <h2>Commissions's rules</h2>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body main-font p-3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam mauris eros, non lacinia tellus imperdiet vel. Phasellus in nisi eget nisl tincidunt eleifend.</p>
+      <p>Nullam eu ligula sagittis, maximus neque in, euismod sem. Sed non porttitor sapien. Cras iaculis ut dui in fermentum. Cras id tortor mattis,
+        dignissim justo finibus, tristique diam. Mauris dui risus, vulputate et lectus in, viverra fermentum libero. Maecenas turpis augue, lacinia non odio imperdiet, aliquam vehicula tellus. Mauris pharetra scelerisque ligula id tincidunt. Curabitur id mi eu
+        nibh convallis tincidunt at vel lectus. Orci varius natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Aliquam dapibus eros nec elit egestas laoreet et maximus quam. Curabitur tellus augue, iaculis ac felis a, luctus elementum augue. Nullam viverra suscipit vulputate.</p>
+      <p>Quisque mollis, justo vitae tempus iaculis, arcu diam tempus quam, quis pellentesque eros nibh vel neque. Ut eleifend molestie nisl non dapibus. Praesent in mauris lorem. Fusce eget porta erat, nec pretium enim. Nam egestas dui at neque mattis, nec vestibulum tellus lacinia. Vestibulum odio nibh, egestas sed fringilla vitae, luctus eu quam. Phasellus ultrices eget nunc id euismod. Cras lobortis quam eu eros imperdiet, at fermentum lorem laoreet. Nunc non nisi dui. Duis fringilla efficitur lectus, eu dictum erat ornare et. Morbi volutpat nunc enim, eget ullamcorper velit luctus sagittis. Suspendisse pretium laoreet tellus a consectetur.</p>
+      <p>Vestibulum non eros interdum</p>
+  </div>
+</ng-template>
+
+<button class="no-decorations-btn"
+        (click)="open(aboutUs)">
+  <span class="main-font main-hover">rules</span>
+</button>

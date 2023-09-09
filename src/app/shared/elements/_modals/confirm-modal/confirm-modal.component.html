@@ -1,0 +1,27 @@
+<ng-template #confirm let-c="close" let-d="dismiss">
+  <div class="modal-body main-font p-3 text-center">
+    <div class="my-3">{{question}}</div>
+
+    <div class="d-flex justify-content-around py-3">
+      <button type=button
+              aria-label="confirm"
+              class="btn btn-outline-dark"
+              (click)="setConfirm(true)"
+      >confirm</button>
+      <button
+        type=button
+        class="btn btn-outline-secondary"
+        aria-label="cancel"
+        (click)="setConfirm(false)"
+      >cancel</button>
+    </div>
+  </div>
+</ng-template>
+
+<div
+  (click)="open(confirm)"
+  class="pointer main-hover"
+>
+  <i class="bi bi-box-arrow-in-left"></i>
+</div>
+

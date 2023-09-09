@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { GalleryPageRoutingModule } from './gallery-page-routing.module';
-import { ArtModalComponent } from '../../shared/modals/art-modal/art-modal.component';
-import { RouterModule } from '@angular/router';
+import { ArtModalComponent } from '../../shared/elements/_modals/art-modal/art-modal.component';
+import { SmallSearchFieldModule } from '../../shared/elements/small-search-field/small-search-field.module';
+import { BackNavigationArrowModule } from '../../shared/elements/back-navigation-arrow/back-navigation-arrow.module';
 
 @NgModule({
-  declarations: [ GalleryPageComponent ],
-  exports: [ GalleryPageComponent ],
+  declarations: [GalleryPageComponent],
+  exports: [GalleryPageComponent],
   imports: [
     CommonModule,
     GalleryPageRoutingModule,
     ArtModalComponent,
-    RouterModule
-  ]
+    SmallSearchFieldModule,
+    BackNavigationArrowModule,
+  ],
 })
-export class GalleryPageModule { }
+export class GalleryPageModule {}

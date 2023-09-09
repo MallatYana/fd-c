@@ -1,0 +1,53 @@
+<ng-template #confirm let-c="close" let-d="dismiss">
+  <div class="modal-body main-font p-3">
+    <form [formGroup]="logInForm" (submit)="submitForm()">
+      <div class="d-flex align-items-center flex-column">
+        <div class="py-2 w-300">
+          <label class="mb-1">Nickname</label>
+          <input type="text"
+                 formControlName="nickName"
+                 class="no-decorations-input"
+                 [ngClass]="{ invalid:
+                    logInForm.controls['nickName'].invalid
+                    && logInForm.controls['nickName'].touched
+                 }"
+          >
+          <div class="position-relative">
+            <div *ngIf="logInForm.controls['nickName'].invalid && logInForm.controls['nickName'].touched"
+                 class="warning-text text-left position-absolute">
+              Please fill required field
+            </div>
+          </div>
+        </div>
+        <div class="py-2 w-300">
+          <label class="mb-1">Password</label>
+          <input
+            type="password"
+            class="no-decorations-input"
+            formControlName="password"
+            [ngClass]="{ invalid:
+                    logInForm.controls['password'].invalid && logInForm.controls['password'].touched
+                 }"
+          >
+          <div class="position-relative">
+            <div *ngIf="logInForm.controls['password'].invalid && logInForm.controls['password'].touched"
+                 class="warning-text text-left position-absolute">
+              Please fill required field
+            </div>
+          </div>
+        </div>
+        <button type="submit"
+                class="btn btn-outline-dark my-4 py-1 px-2"
+                [disabled]="logInForm.invalid"
+        >Log in</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<div
+  (click)="open(confirm)"
+  class="pointer main-hover"
+>
+  <i class="bi bi-box-arrow-right"></i>
+</div>

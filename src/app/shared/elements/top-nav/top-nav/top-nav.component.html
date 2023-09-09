@@ -1,0 +1,28 @@
+<div class="position-absolute top-nav font-size-icons">
+  <div *ngIf="isLogged"
+       class="d-flex justify-content-around">
+    <div class="mx-1 pointer main-hover"
+      [routerLink]="'/'">
+      <i class="bi bi-house"></i>
+    </div>
+    <div class="mx-1 pointer main-hover"
+      [routerLink]="'/creators/id'">
+      <i class="bi bi-person"></i>
+    </div>
+    <div class="mx-1 pointer main-hover">
+      <i class="bi bi-pencil"></i>
+    </div>
+    <div class="mx-2 pointer main-hover">
+      <confirm-modal
+        [question]="'You sure you want to log out?'"
+        (isConfirmed)="logInToggle($event)"></confirm-modal>
+    </div>
+  </div>
+  <div
+    *ngIf="!isLogged"
+    (click)="logInToggle(true)"
+    class="pointer main-hover"
+  >
+    <log-in-modal></log-in-modal>
+  </div>
+</div>

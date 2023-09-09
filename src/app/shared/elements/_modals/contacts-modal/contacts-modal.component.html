@@ -1,0 +1,22 @@
+<ng-template #contacts let-c="close" let-d="dismiss">
+  <div class="description-text font-smaller p-2">
+    <span>We kindly remind you that the website is not responsible either for the information provided by the creator
+      or for the performance of the work you order. The website only provide contacts.
+      We advise you to pay for the work after you see the finished sketch.</span>
+  </div>
+  <div class="modal-body main-font">
+    <div class="mt-2">
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam mauris eros,</div>
+      <div>non lacinia tellus imperdiet vel. Phasellus in nisi eget nisl tincidunt eleifend.</div>
+      <div>Nullam eu ligula sagittis, maximus neque in, euismod sem. Sed non porttitor sapien. </div>
+      <div>Cras iaculis ut dui in fermentum. Cras id tortor mattis,</div>
+    </div>
+  </div>
+</ng-template>
+
+
+
+<button class="mt-2 btn btn-outline-dark pointer"
+        (click)="open(contacts)">
+  Show contacts
+</button>

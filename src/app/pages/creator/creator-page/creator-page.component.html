@@ -1,0 +1,38 @@
+<div>
+  <app-top-nav></app-top-nav>
+<div class="container position-relative pt-5">
+  <back-navigation-arrow [url]="'/creators'"></back-navigation-arrow>
+  <div class="container">
+    <div class="p-5 row">
+      <div class="col-4 image-container">
+        <img src="{{creator.avatar}}"
+             class="rounded d-block">
+      </div>
+      <div class="col-8 main-font d-flex flex-column justify-content-around">
+        <div>
+          <div class="mb-4 font-large fw-bold">
+            {{creator.nickName}}
+          </div>
+          <div class="">
+            {{creator.mainInfo}}
+          </div>
+        </div>
+        <div>
+          <contacts-modal></contacts-modal>
+        </div>
+      </div>
+    </div>
+
+    <!--Pricing-->
+    <div class="">
+      <h4 class="main-font">Pricing:</h4>
+      <div class="f-dlex justify-content-start">
+        <div *ngFor="let item of creator.price"
+             class="mx-2">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

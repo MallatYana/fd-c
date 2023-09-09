@@ -1,0 +1,110 @@
+<div>
+  <app-top-nav></app-top-nav>
+
+  <div class="d-flex flex-column justify-content-center align-items-center pt-5">
+    <div class="py-5">
+      <h4 class='main-font'>Registration form</h4>
+    </div>
+    <form [formGroup]="registerForm" (submit)="submitForm()">
+      <div class="main-font">
+        <div class="py-2">
+          <label class="mb-1">Nickname</label>
+          <input type="text"
+                 formControlName="nickName"
+                 class="no-decorations-input"
+                 [ngClass]="{ invalid:
+                    registerForm.controls['nickName'].invalid
+                    && registerForm.controls['nickName'].touched
+                 }"
+          >
+          <div class="position-relative">
+            <div *ngIf="registerForm.get('nickName')!.hasError('required') && registerForm.controls['nickName'].touched"
+                 class="warning-text text-left position-absolute">
+              Please fill required field
+            </div>
+            <div *ngIf="registerForm.get('nickName')!.hasError('minlength') && registerForm.controls['nickName'].touched"
+                 class="warning-text text-left position-absolute">
+              Nickname should containt at least 4 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="py-2">
+          <label class="mb-1">Email</label>
+          <input type="text"
+                 formControlName="email"
+                 class="no-decorations-input"
+                 [ngClass]="{ invalid:
+                    registerForm.controls['email'].invalid && registerForm.controls['email'].touched
+                 }"
+          >
+          <div class="position-relative">
+            <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched"
+                 class="warning-text text-left position-absolute">
+              Please fill required field
+            </div>
+          </div>
+        </div>
+
+        <div class="py-2">
+          <label class="mb-1">Password</label>
+          <input
+            type="password"
+            class="no-decorations-input"
+            formControlName="password"
+            [ngClass]="{ invalid:
+                    registerForm.controls['password'].invalid && registerForm.controls['password'].touched
+                 }"
+          >
+          <div class="position-relative">
+            <div *ngIf="registerForm.get('password')!.hasError('required') && registerForm.controls['password'].touched"
+                 class="warning-text text-left position-absolute">
+              Please fill required field
+            </div>
+            <div *ngIf="registerForm.get('password')!.hasError('minlength') && registerForm.controls['password'].touched"
+                 class="warning-text text-left position-absolute">
+              Nickname should containt at least 8 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="py-2">
+          <label>Role
+            <span class="mb-1 mx-1"
+            >
+              <i class="bi bi-info-circle"
+                 [ngbTooltip]="infoRoles"
+                 placement="right"
+              ></i>
+            </span>
+          </label>
+          <div class="ml-2">
+            <select class="no-decorations-select form-select"
+                    formControlName="type"
+            >
+              <option value="painter">Painter</option>
+              <option value="writer">Writer</option>
+              <option value="viewer">Viewer</option>
+              <option value="both">Both painter and writer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="submit"
+                  class="btn btn-outline-dark my-4 py-1 px-2"
+                  [disabled]="registerForm.invalid"
+          >Register</button>
+        </div>
+      </div>
+      </form>
+  </div>
+</div>
+
+<ng-template #infoRoles>
+  <div class="m-1 text-left">
+    <p><span class="fw-bold">Viewer</span> - if you none a writer or a painter</p>
+    <p><span class="fw-bold">Writer</span> - if you are here to take writer commissions</p>
+    <p><span class="fw-bold">Painter</span> - if you are here to take painter commissions</p>
+  </div>
+</ng-template>

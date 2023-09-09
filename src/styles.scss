@@ -12,26 +12,21 @@
   cursor: pointer !important;
 }
 
+//fonts
 .calligraffiti {
   font-family: CalligraffittiRegular !important;
 }
-
 .main-font {
-  font-family: Avenir;
+  font-family: var(--main-font);
   font-weight: lighter;
 }
 
-.main-hover {
-  &:hover {
-    color: var(--fdc-main-hover-color);
-  }
-}
+//no-decorations
 .no-decorations-text {
   color: inherit;
   text-decoration: none;
   cursor: inherit;
 }
-
 .no-decorations-btn {
   background: inherit;
   border: none;
@@ -39,25 +34,27 @@
   padding: 0;
   margin: 0;
 }
+.no-decorations-input {
+  outline: none;
+  border: none;
+}
+.no-decorations-select {
+  outline: none;
+  border: none;
+}
 
+//text styles
 .description-text {
-  font-size: small;
+  font-size: smaller;
   text-align: justify;
   color: var(--fdc-description-color);
 }
-
-.nav-arrow-left {
-  top: 40px;
-  left: 20px;
-
-  @media (max-width: 799px) {
-    left: 15px;
-  }
-  @media (max-width: 450px) {
-    display: none;
-  }
+.warning-text {
+  font-size: smaller;
+  color: red;
 }
 
+//hovers
 .author-link-hover {
   transition: 0.3s;
   cursor: pointer;
@@ -68,4 +65,52 @@
     border: none;
     outline: none;
   }
+}
+.main-hover {
+  &:hover {
+    color: var(--fdc-main-hover-color);
+  }
+}
+
+.page-link {
+  color: black;
+  font-size: 18px;
+  font-family: var(--main-font);
+  font-weight: lighter;
+}
+
+//font-sizes
+.font-small {
+  font-size: 12px;
+}
+.font-smaller {
+  font-size: 10px;
+}
+.font-large {
+  font-size: 20px;
+}
+.font-size-icons {
+  font-size: 25px;
+}
+
+//inputs, labels, select, etc
+label {
+  display: block;
+}
+input {
+  width: 300px;
+  height: 40px;
+  font-family: Avenir;
+  border-radius: 5px;
+  padding: 2px 15px;
+  border: 1px solid var(--fdc-description-color) !important;
+}
+select {
+  border: 1px solid var(--fdc-description-color) !important;
+}
+option {
+  margin: 3px 0px;
+}
+.invalid {
+  border: 1px solid red !important;
 }
