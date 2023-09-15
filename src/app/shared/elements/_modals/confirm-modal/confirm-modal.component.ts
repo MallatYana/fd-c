@@ -10,6 +10,7 @@ import { NgbModalConfig, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstra
 })
 export class ConfirmModalComponent {
   @Input() question = 'Sorry some mistake over here';
+  @Input() btnInnerHtml = 'just some mistake';
   @Output() isConfirmed = new EventEmitter<boolean>();
 
   confirmationModal: NgbModalRef | undefined;

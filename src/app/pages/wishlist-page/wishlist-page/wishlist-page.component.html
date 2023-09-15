@@ -1,0 +1,87 @@
+<app-top-nav></app-top-nav>
+<div class="container py-5">
+  <div class="mb-5">
+    <h1 class="calligraffiti text-center">Wishlist</h1>
+    <p class="main-font text-center">
+      Here is the wishes. It contains main description of wish, and also may contains <span class="font-small">extra </span>
+      description for additional details and detailed descriptions and may contians<span style="font-weight: bold"> assinged creator</span> from
+    this web site.
+    </p>
+  </div>
+
+  <div *ngFor="let wish of wishListItems"
+       class="my-4">
+    <app-wishlist-card
+      [wish]="wish"
+      (isShouldDelete)="deleteWishItem($event)"
+    ></app-wishlist-card>
+  </div>
+
+  <div *ngIf="isLogged" class="card mb-3">
+    <div *ngIf="!isFormOpened" class="card-body d-flex justify-content-center">
+        <button
+          type="button"
+          class="no-decorations-btn main-hover d-flex align-items-center"
+          (click)="isFormOpened = true"
+        >
+          <span class="bi bi-plus-circle large-icon m-3"></span>
+          <span class="font-large">  add new wish</span>
+        </button>
+    </div>
+    <div *ngIf="isFormOpened" class="card-body main-font">
+      <form
+        [formGroup]="wishForm"
+        (submit)="addWishItem()"
+      >
+        <div>
+          <div>
+            <label>Main description* : </label>
+            <textarea
+              [ngClass]="{ invalid:
+                    wishForm.controls['mainDescription'].invalid &&
+                    wishForm.controls['mainDescription'].touched }"
+              type="text"
+              formControlName="mainDescription"
+              class="no-decorations-input mt-1 mb-2"
+            ></textarea>
+            <label>Extra description:
+              <span class="mb-1 mx-1">
+                <i
+                  class="bi bi-info-circle"
+                   [ngbTooltip]="infoExtra"
+                   placement="right"
+                ></i>
+              </span>
+            </label>
+            <textarea
+              type="text"
+              formControlName="extraDescription"
+              class="no-decorations-input mt-1 mb-3"
+            ></textarea>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label style="display: inline-block">Assigned creator: </label>
+              <input
+                style="display: inline-block"
+                type="text"
+                formControlName="assignNickName"
+                class="no-decorations-input mx-2"
+                placeholder="@nickname..."
+              >
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center">
+              <button
+                class="btn main-hover submit-btn"
+                type="submit"
+                [disabled]="wishForm.invalid"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

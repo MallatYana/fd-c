@@ -36,10 +36,21 @@
             </div>
           </div>
         </div>
-        <button type="submit"
-                class="btn btn-outline-dark my-4 py-1 px-2"
-                [disabled]="logInForm.invalid"
-        >Log in</button>
+        <div class="my-4 py-1 w-300">
+          <button type="submit"
+                  class="btn btn-outline-dark px-2"
+                  [disabled]="logInForm.invalid"
+          >
+            Log in
+          </button>
+          <button type="button"
+                  class="btn px-2 main-hover text-right"
+                  [routerLink]="'/register'"
+                  (click)="d('Cross click')"
+          >
+            Register
+          </button>
+        </div>
       </div>
     </form>
   </div>

@@ -92,7 +92,14 @@
 .font-size-icons {
   font-size: 25px;
 }
+.large-icon {
+  font-size: 40px;
+}
 
+//text-directions
+.text-right {
+  text-align: right;
+}
 //inputs, labels, select, etc
 label {
   display: block;
@@ -105,6 +112,12 @@ input {
   padding: 2px 15px;
   border: 1px solid var(--fdc-description-color) !important;
 }
+textarea {
+  border-radius: 5px;
+  font-family: Avenir;
+  padding: 10px 15px;
+}
+
 select {
   border: 1px solid var(--fdc-description-color) !important;
 }
@@ -114,3 +127,4 @@ option {
 .invalid {
   border: 1px solid red !important;
 }
+

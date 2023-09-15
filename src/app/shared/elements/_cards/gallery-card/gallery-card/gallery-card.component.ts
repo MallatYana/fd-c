@@ -10,10 +10,8 @@ import { GalleryItem } from '../../../../../core/models/gallery-item';
 export class GalleryCardComponent implements OnInit {
   constructor(private api: ApiService) {}
 
-  images = [1, 2, 3, 3, 2, 1]; //запрос к серверу на последние 3-6 картинок не НЦа
+  images = [1, 2, 3, 2, 1, 4, 3, 3, 2, 1, 4, 1, 2, 3, 4];
   galleryItems: GalleryItem[] = [];
 
   ngOnInit(): void {}
-
-  //here will come all latest jobs but definitely not 18+
 }

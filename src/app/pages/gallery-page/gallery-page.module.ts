@@ -5,6 +5,7 @@ import { GalleryPageRoutingModule } from './gallery-page-routing.module';
 import { ArtModalComponent } from '../../shared/elements/_modals/art-modal/art-modal.component';
 import { SmallSearchFieldModule } from '../../shared/elements/small-search-field/small-search-field.module';
 import { BackNavigationArrowModule } from '../../shared/elements/back-navigation-arrow/back-navigation-arrow.module';
+import { TopNavModule } from '../../shared/elements/top-nav/top-nav.module';
 
 @NgModule({
   declarations: [GalleryPageComponent],
@@ -15,6 +16,7 @@ import { BackNavigationArrowModule } from '../../shared/elements/back-navigation
     ArtModalComponent,
     SmallSearchFieldModule,
     BackNavigationArrowModule,
+    TopNavModule,
   ],
 })
 export class GalleryPageModule {}

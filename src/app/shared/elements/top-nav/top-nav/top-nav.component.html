@@ -9,12 +9,23 @@
       [routerLink]="'/creators/id'">
       <i class="bi bi-person"></i>
     </div>
+    <div class="d-flex mx-1">
+      <div class="mx-1 pointer main-hover"
+           [routerLink]="'/liked'">
+        <i class="bi bi-heart"></i>
+      </div>
+      <div class="mx-1 pointer main-hover"
+           [routerLink]="'/wishlist'">
+        <i class="bi bi-card-list"></i>
+      </div>
+    </div>
     <div class="mx-1 pointer main-hover">
       <i class="bi bi-pencil"></i>
     </div>
     <div class="mx-2 pointer main-hover">
       <confirm-modal
         [question]="'You sure you want to log out?'"
+        [btnInnerHtml]="btnInnerHtml"
         (isConfirmed)="logInToggle($event)"></confirm-modal>
     </div>
   </div>

@@ -1,23 +1,30 @@
-<div class="gallery-container">
-    <div class="card-body mb-4 d-flex justify-content-around align-items-center">
-      <div *ngFor="let img of images"
-           class="image-container px-2 d-flex justify-content-around align-items-center"
-           ngbTooltip="let's imagine we have some text here"
-           placement="top"
-      >
-        <img src="../../../../../assets/images/gallery-sample-{{img}}.png"
-             class="rounded img-fluid d-block">
-      </div>
-      <button type="button"
-              class="btn d-flex justify-content-around align-items-center"
-              style="height: 30px"
-              [routerLink]="['/gallery']"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-             class="bi bi-arrow-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-        </svg>
-      </button>
+<div>
+  <div class="row">
+    <h5 class="text-center main-font">
+      Latest upload works:
+    </h5>
+
+    <div *ngFor="let img of images"
+         class="col-3 image-container px-2 my-3 d-flex justify-content-around align-items-center"
+         ngbTooltip="let's imagine we have some text here"
+         placement="top"
+    >
+      <img src="../../../../../assets/images/gallery-sample-{{img}}.png"
+           class="rounded img-fluid d-block">
     </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button
+      class="no-decorations-btn pointer"
+      type="button"
+    >
+      <h5
+        class="main-hover main-font"
+        [routerLink]="'/gallery'"
+      >
+        See the full gallery
+      </h5>
+    </button>
+  </div>
 </div>

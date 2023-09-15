@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   FormBuilder,
@@ -16,7 +17,7 @@ import { AuthService } from '../../../../core/services/auth.service';
   templateUrl: './log-in-modal.component.html',
   styleUrls: ['./log-in-modal.component.scss'],
   providers: [NgbModalConfig, NgbModal],
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, RouterModule],
 })
 export class LogInModalComponent implements OnInit {
   constructor(

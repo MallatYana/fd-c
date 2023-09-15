@@ -1,23 +1,31 @@
-<div class="position-relative">
-  <back-navigation-arrow [url]="'/'"></back-navigation-arrow>
-  <div class="container mt-4">
+<app-top-nav></app-top-nav>
+<div class="container pt-5">
+  <div>
+    <h1 class="calligraffiti text-center">Gallery page</h1>
+    <p class="main-font text-center">
+      All completed jobs in order of last upload
+    </p>
+  </div>
+
+  <div class="my-5">
     <app-small-search-field [placeholder]="'Search by @nickname or description...'"></app-small-search-field>
-    <div class="row justify-content-center mt-3">
-      <div class="col d-flex justify-content-center align-content-center"
-          *ngFor="let art of galleryItems">
-       <div class="card m-2"
-            style="width: 18rem">
-         <art-modal [item]="art"
-                    [previewSize]="{width: 17.9, height: 299}"
-                    [isArt]="true"></art-modal>
-         <div class="card-body">
-           <a class="card-text pointer no-decorations-text author-link-hover"
-              href="{{art.authorLink}}">
-              {{art.author}}
-           </a>
-         </div>
-       </div>
-     </div>
-   </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col d-flex justify-content-center align-content-center"
+         *ngFor="let art of galleryItems">
+      <div class="card m-2"
+           style="width: 18rem">
+        <art-modal [item]="art"
+                   [previewSize]="{width: 17.9, height: 299}"
+                   [isArt]="true"></art-modal>
+        <div class="card-body">
+          <a class="card-text pointer no-decorations-text author-link-hover"
+             href="{{art.authorLink}}">
+            {{art.author}}
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

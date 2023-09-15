@@ -1,24 +1,39 @@
 <app-top-nav></app-top-nav>
 <div style="padding-top: 120px; margin-left: 120px; margin-right: 120px">
 
-  <h1 class="calligraffiti text-center mb-5">Commissions</h1>
+  <div class="mb-5">
+    <h1 class="calligraffiti text-center">Commissions</h1>
+    <p class="main-font text-center">
+      website for creators to take a commission and viewers to ask for it (I would make normal decsription one day I promise)
+    </p>
+  </div>
 
   <app-small-search-field></app-small-search-field>
 
-  <div class="pt-5">
+  <div class="row pt-5">
+    <div class="col-6 text-center">
+      <button
+        class="no-decorations-btn"
+        type="button"
+        [routerLink]="'/creators?type=writers'">
+        <h4 class="main-font main-hover">Our painters</h4>
+      </button>
+    </div>
+    <div class="col-6 text-center">
+      <button
+        class="no-decorations-btn"
+        type="button"
+        [routerLink]="'/creators?type=painters'">
+        <h4 class="main-font main-hover">Our writers</h4>
+      </button>
+    </div>
+  </div>
+
+  <div class="pt-3">
     <app-gallery-card></app-gallery-card>
   </div>
 
-  <div class="d-flex justify-content-between gap-3 pt-3">
-   <app-artists-list-card
-     [isArter]="true"
-   ></app-artists-list-card>
-    <app-artists-list-card
-      [isArter]="false"
-    ></app-artists-list-card>
-  </div>
-
-  <div class="mt-5 d-flex justify-content-center align-content-center main-font">
+  <div class="mt-5 mb-2 d-flex justify-content-center align-content-center main-font">
     <div class="mx-2 pointer">
       <about-us-modal></about-us-modal>
     </div>

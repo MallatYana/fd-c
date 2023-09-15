@@ -9,6 +9,7 @@ export class TopNavComponent {
   @Input() isEdit = false;
 
   isLogged = true;
+  btnInnerHtml = '<i class="bi bi-box-arrow-in-left"></i>';
 
   logInToggle(isNeedToBeToggled: boolean) {
     if (isNeedToBeToggled) {

@@ -20,9 +20,19 @@ const routes: Routes = [
       import('./pages/gallery-page/gallery-page.module').then((m) => m.GalleryPageModule),
   },
   {
+    path: 'wishlist',
+    loadChildren: () =>
+      import('./pages/wishlist-page/wishlist-page.module').then((m) => m.WishlistPageModule),
+  },
+  {
     path: 'register',
     component: RegisterPageComponent,
     canActivate: [OnLoggedGuard],
+  },
+  {
+    path: 'liked',
+    loadChildren: () =>
+      import('./pages/liked-page/liked-page.module').then((m) => m.LikedPageModule),
   },
   {
     path: '**',
